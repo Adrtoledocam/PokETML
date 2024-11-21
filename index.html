@@ -1,0 +1,110 @@
+
+<html>
+<head>
+    <title>PokEtml</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Pokemon Font from Internet-->
+    <link href="https://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="#">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+    </style>
+</head>
+
+<body>
+    <!-- <audio src="../PokeETMLBattleV2_0/music/Battle_Music.mp3" id="Battle_Music"></audio> -->
+    <!--<audio src="/music/School_Music.mp3" class="School_Music" autoplay loop></audio>
+
+    <audio src="/music/Battle_Music.mp3" class="Battle_Music" autoplay loop></audio>-->
+    <canvas class="canvasMap"></canvas>
+    
+    <div class = "uiGameplay"> 
+        <div class = "infoPlayer">
+            <h3 class = textCanvasInfoPlayer> Nom : PlayerName <br><br> Pokemon : Pikachu <br><br> Niveau : Débutant</h3>
+        </div>
+        <div class = "infoControll">
+            <h3 class = "textInfoControll">Commandes<br><br> W - ↑<br><br>S - ↓<br><br>A - <<br><br>D - ><br></h3>
+
+        </div>
+    </div>
+    <div class="introductionScene">
+            <div class="trainer"></div>
+        <div class ="cardSelectIMG">
+            <div class="pokemon1"></div>
+            <div class="pokemon2"></div>
+            <div class="pokemon3"></div> 
+
+        </div>
+        <div class="panel">
+            <div class="textPanelIntro">
+                <h3 class="playerName">PlayerName</h3>
+                <h3 class="text">TextInfo</h3>
+            </div>
+            <div class="btnSectionIntro">
+                <button class="nextBtnIntro">Continuer</button>
+            </div>
+        </div>
+    </div>
+    <div class = "gameplayBattle">
+        <div class="enemyHP">
+            <h3 class = "enemyNameBattle" >Carapuce</h3>
+            <div class="lifeLineGrey">
+            </div>
+            <div id = "enemyLife" class="lifeLineGreenEnemy">
+            </div>
+        </div>
+        <div>
+            <img class="enemyImg" src = "images/Carapuce.png">
+        </div>
+
+        <div>
+            
+            <img class="playerImg" src = "images/PikachuCard.png">
+        </div>
+        <div class="playerHP">
+            <h3 class = "playerNameBattle">Player</h3>
+            <div class="lifeLineGrey">
+            </div>
+            <div id = "playerLife" class="lifeLineGreenPlayer">
+            </div>
+        </div>
+        <div class = "bigMenu">
+            <div class = "textMenu">                
+                <h2 class="gameMsg">Que dois-je faire ? </h2>
+            </div>
+
+            <div class="optionsMenu" >
+                
+                    <button class = "ahtml">Attaquer  - HTML</button>
+                    <button class = "Ajs">Attaquer  - JavaScript</button>
+                
+                
+                    <button class = "Acss">Attaquer  - CSS</button>
+
+                    <button class = "Back">Retour </button>
+            </div>
+        </div> 
+    </div>   
+    <script src="/js/index.js"></script>
+    <script src="/data/collision.js"></script>
+    <script src="/data/collisionInside.js"></script>
+<script src="/data/WallCollision.js"></script>
+<script src="/data/WallCollision2.js"></script>
+<script src="/data/WallCollision3.js"></script>
+<script src="/data/WallCollision4.js"></script>
+<script src="/data/collisionTeacher1.js"></script>
+<script src="/data/collisionTeacher2.js"></script>
+<script src="/data/collisionTeacher3.js"></script>
+
+    <script  src="/js/Map1School.js"></script>
+    
+
+</body>
+
+<footer>
+   <!-- Designed by Adrian Toledo - CIN2B - ETML -->
+</footer>
+</html>

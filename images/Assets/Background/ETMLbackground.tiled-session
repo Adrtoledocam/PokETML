@@ -1,0 +1,81 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "SchoolTileMap.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "exportAsImage.useCurrentScale": true,
+    "file.lastUsedOpenFilter": "Todos los archivos (*)",
+    "fileStates": {
+        "BattleCollision.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 0.33
+        },
+        "Collision.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 0.33
+        },
+        "ETML_School.tsx": {
+            "scaleInDock": 0.0625,
+            "scaleInEditor": 0.75
+        },
+        "Inside2.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1.5
+        },
+        "InsideSchool.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Insideeeee.tsx": {
+            "scaleInDock": 1.5,
+            "scaleInEditor": 1
+        },
+        "SchoolTileMap.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 7,
+            "viewCenter": {
+                "x": -15,
+                "y": 273.6666666666667
+            }
+        }
+    },
+    "last.exportedFilePath": "D:/Escritorio/PC Disco D/OneDrive - Education Vaud/ETML/CID2B/2/PortesOuvertes/PokeETMLBattleV2_0/images/Assets/Background",
+    "last.externalTilesetPath": "D:/Escritorio/PC Disco D/OneDrive - Education Vaud/ETML/CID2B/2/PortesOuvertes/PokeETMLBattleV2_0/images/Assets/Background",
+    "last.imagePath": "D:/Escritorio/PC Disco D/OneDrive - Education Vaud/ETML/CID2B/2/PortesOuvertes/PokeETMLBattleV2_0/images/Assets/Background",
+    "map.fixedSize": false,
+    "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 12,
+    "map.tileWidth": 12,
+    "openFiles": [
+        "SchoolTileMap.tmx",
+        "ETML_School.tsx",
+        "Collision.tsx",
+        "BattleCollision.tsx",
+        "InsideSchool.tsx",
+        "Insideeeee.tsx",
+        "Inside2.tsx"
+    ],
+    "project": "ETMLbackground.tiled-project",
+    "recentFiles": [
+        "SchoolTileMap.tmx",
+        "ETML_School.tsx",
+        "Collision.tsx",
+        "BattleCollision.tsx",
+        "InsideSchool.tsx",
+        "Inside2.tsx",
+        "Insideeeee.tsx"
+    ],
+    "tileset.lastUsedFilter": "Archivos de conjuntos de patrones Tiled (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    },
+    "tileset.transparentColor": "#5500ff",
+    "tileset.useTransparentColor": true
+}
