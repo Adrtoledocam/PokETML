@@ -33,11 +33,11 @@ let positionLeftO
 
 //ROUND 1#
 let textHTML1Rnd1= "\< h4 class = 'SuperAtack' \> Button \< /h4\>";
-let textHTML2Rnd1= "\< button \> SuperAtack2 \< button\>"; //CorrectOption
-let textHTML3Rnd1= "\< button \> SuperAtack \< button\>";  //CorrectOption
+let textHTML2Rnd1= "\< button \> Superatack \< /button\>"; //CorrectOption
+let textHTML3Rnd1= "\< button \> SuperAtack \< /button\>";  //CorrectOption
 
 let textJS1Rnd1 = "enemyLife == 100";
-let textJS2Rnd1 = "playerLife ++ 100";
+let textJS2Rnd1 = "playerLife -+ 100";
 let textJS3Rnd1 = "playerLife = 100"; //CorrectOption
 
 let textCSS1Rnd1 = "enemyImage { top : 200px}";//CorrectOption
@@ -45,13 +45,13 @@ let textCSS2Rnd1 = "enemyImage { width == 0px}";
 let textCSS3Rnd1 = "enemyImage { left : 300px}"; //CorrectOption
 
 //ROUND 2#
-let textHTML1Rnd2= "\< img class = 'enemyImage' src = ' images/ Rondoudou.png '\>";//CorrectOption
-let textHTML2Rnd2= "\< img class = 'enemyImage' src = 'images/ .Carapuce.png '\>";
-let textHTML3Rnd2= "\< img class = 'enemyImage' src : 'images// Rondoudou.png '\>";
+let textHTML1Rnd2= "\< img src = ' images/ Rondoudou.png '\>";//CorrectOption
+let textHTML2Rnd2= "\< img src == 'images/ .Carapuce.png '\>";
+let textHTML3Rnd2= "\< img src : 'images// Rondoudou.png '\>";
 
 let textJS1Rnd2 = "if(pokemonEnemy == Arcko){enemyLife -= 34}"; //CorrectOption
 let textJS2Rnd2 = "if(pokemonEnemy == Carapuce){enemyLife != 34}";
-let textJS3Rnd2 = "if(pokemonEnemy == Mewtwo){enemyLife == 34}";
+let textJS3Rnd2 = "if(pokemonEnemy == Mewtwo){enemyLife +- 34}";
 
 let textCSS1Rnd2 = "playerImage { visibility : 'hidden'}"; //CorrectOption
 let textCSS2Rnd2 = "playerImage { width : 0}"; 
@@ -59,7 +59,7 @@ let textCSS3Rnd2 = "playerImage { visibility : \"hidden\"}"; //CorrectOption
 
 //ROUND 3#
 let textHTML1= "\< h3 class = 'EnemyName' \> Ditto \< /h3\>"; //CorrectOption
-let textHTML2= "\< h3 class == 'EnemyName' \> Ditto \< /h3\>";
+let textHTML2= "\< h3 class == 'EnemyName' \> Ditto \< //h3\>";
 let textHTML3= "\< h3 class = 'EnemyName' \> Ditto \< h3\>";
 
 let textJS1 = "playerLife -= 34"; 
@@ -227,10 +227,10 @@ btnAhtml.addEventListener('click', function(){
                 enemyLife -= 33;
                 enemyLifeLine.style.width=enemyLife+"%";
                 atackCSS = false;
-                wastedCSS = true;
-                gameMsg.innerHTML = playerNameBattleJS.innerHTML+" est invisible. L'ennemi confus s'est blessé";
+                wastedCSS = true; NameBattleJS.innerHTML+" est invisible. L'ennemi confus s'est blessé";
                 if (wastedCSS && wastedHTML && wastedJS){
                     gameMsg.innerHTML=playerNameBattleJS.innerHTML+" a gagné!";
+                    //imgPlayerPokemon.style.visibility = "hidden"
                     BtnBackAction();
                 }
                 btnAhtml.style.backgroundColor = "grey";
@@ -279,7 +279,6 @@ btnAhtml.addEventListener('click', function(){
 
     }
     else if(roundBattle == 3){ 
-        imgPlayerPokemon.style.visibility = "visible"
         if (!wastedHTML && atackOptions){
             //gameMsg.innerHTML = playerNameBattleJS.innerHTML + " va attaquer le code HTML de l'adversaire";
             textAtackMoment(31)
@@ -429,12 +428,12 @@ else if(roundBattle==2){
         atackOptions = false;
     }   
     else if(!wastedCSS &&atackCSS  ){
-        imgEnemyPokemon.style.visibility = "hidden"
+        imgPlayerPokemon.style.visibility = "hidden"
             enemyLife -= 33;
             enemyLifeLine.style.width=enemyLife+"%";
             atackCSS = false;
             wastedCSS = true;
-            gameMsg.innerHTML = playerNameBattleJS.innerHTML+" a changé la position de l'ennemi. L'ennemi est plus faible";
+            gameMsg.innerHTML = playerNameBattleJS.innerHTML+" est invisible. L'ennemi confus s'est blessé";
             if (wastedCSS && wastedHTML && wastedJS){
                 gameMsg.innerHTML=playerNameBattleJS.innerHTML+" a gagné!";
                 BtnBackAction();
@@ -701,12 +700,16 @@ function BtnBackAction (){
             }
             if (wastedHTML){
                 btnAhtml.style.backgroundColor = "grey";
+                imgPlayerPokemon.style.visibility = "visible"
+
             }
             else{
                 btnAhtml.style.backgroundColor = colorBtnHtml;
             }
             if (wastedJS){
                 btnAjs.style.backgroundColor = "grey";
+                imgPlayerPokemon.style.visibility = "visible"
+
             }
             else{
                 btnAjs.style.backgroundColor = colorBtnHtml;
@@ -727,12 +730,15 @@ function BtnBackAction (){
                 console.log("newxtMatch")
                 roundBattle++
                 gameMsg.innerHTML = playerNameBattleJS.innerHTML +"Le joueur a son prochain combat";
+                imgPlayerPokemon.style.visibility = "hidden"
 
                 nextRound();
             }
             else if(wastedCSS && wastedHTML && wastedJS && (playerLife<=0)&&isRoundBattleFinish){
                 console.log("NewGa")
                 gameMsg.innerHTML = playerNameBattleJS.innerHTML +"Le joueur a son prochain combat";
+                imgPlayerPokemon.style.visibility = "hidden"
+
                 nextRound();
             }
             else{
@@ -830,7 +836,7 @@ btnAjs.style.backgroundColor = colorBtnHtml;
             wastedHTML = false
             wastedJS = false
             isNextRound = false
-            //imgEnemyPokemon.style.visibility = "Visible"
+            //imgPlayerPokemon.style.visibility = "hidden"
             if(roundBattle == 1){
                 imgEnemyPokemon.src = "./images/Carapuce.png"
                 enemyName.innerHTML = "Carapuce";

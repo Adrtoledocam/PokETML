@@ -9,6 +9,8 @@ canvas.height = 576;
 //Player stats
 let level = "Débutant"
 let roundBattle = 1;
+//let imgPlayerPokemon = document.querySelector('.playerImg')
+
 
 //Class sprites
 class Sprite {
@@ -416,7 +418,7 @@ const testB = new Boundary({
 const battleBackgroundUI = document.querySelector('.gameplayBattle')
 
 //Camara speed
-let speedCam = 2;
+let speedCam = 5;
 
 //GameEngine
 //Animation system
@@ -462,6 +464,7 @@ function animate(){
         //Game state
         if (battle.initated) 
         {
+            
             battleGame()
             return
         }
@@ -828,6 +831,9 @@ function animate(){
                 ){
                     //Condition
                     if (roundBattle == 3){
+                        const imgPlayerPokemon = document.querySelector('.playerImg')
+                        imgPlayerPokemon.style.visibility = "visible"
+
                         battle.initated = true;
                     }
                 }
@@ -904,6 +910,9 @@ function animate(){
                 ){
                     //Condition
                     if (roundBattle == 3){
+                        const imgPlayerPokemon = document.querySelector('.playerImg')
+                        imgPlayerPokemon.style.visibility = "visible"
+                        
                         battle.initated = true;
                     }
                 }
@@ -978,6 +987,9 @@ function animate(){
                 ){
                     //Condition
                     if (roundBattle == 3){
+                        const imgPlayerPokemon = document.querySelector('.playerImg')
+                        imgPlayerPokemon.style.visibility = "visible"
+                        
                         battle.initated = true;
                     }
                 }
@@ -1037,6 +1049,7 @@ function animate(){
                 ){
                     //Condition
                     if (roundBattle == 2){
+                        imgPlayerPokemon.style.visibility = "visible"
                         battle.initated = true;
                     }
                 }
@@ -1052,6 +1065,9 @@ function animate(){
                 ){
                     //Condition
                     if (roundBattle == 3){
+                        const imgPlayerPokemon = document.querySelector('.playerImg')
+                        imgPlayerPokemon.style.visibility = "visible"
+                        
                         battle.initated = true;
                     }
                 }
@@ -1182,10 +1198,10 @@ function insideSchool(){
 
     if (battle.initated) 
     {        
-         
         battleGame()
         return    
     }
+
 
     if(key.w.pressed && lastKey==='w') 
     {
